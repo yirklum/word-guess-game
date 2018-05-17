@@ -1,0 +1,85 @@
+
+body {
+    background-image: url("../images/donut-background.jpeg");
+    background-repeat: repeat;
+}
+
+.container {
+
+    margin: 0 auto;
+}
+
+.title {
+    /* margin-left: 25%; */
+    border: solid 3px #fff475;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+#pressKeyToStart {
+    display: inline-block;
+    width: 85%;
+    margin-top: 45px;
+    border: solid 3px #fff475;
+}
+
+.directions {
+    background-color: #ffff70;
+    text-align: center;
+    margin-right: 30px;
+    
+}
+
+header {
+    margin-bottom: 10px;
+}
+.word {
+    background-color: #462b04;
+    text-align: center;
+    height: 400px;
+    padding-bottom:;
+    margin-bottom: 100px;
+    padding: 15px 15px;
+}
+
+.chalkboard {
+    background-image: url("../images/chalkboard-bart.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 375px;
+    padding-top: 50px;
+    width: 100%;
+    font-family: 'Walter Turncoat', cursive;
+    color: white;
+}
+
+.score {
+    background-color: white;
+    text-align: center;
+    height: 200px;
+    padding-top: 25px;
+}
+
+.guesses {
+    background-color: white;
+    text-align: center;
+    height: 200px;
+    margin-bottom: 25px;
+    padding-top: 25px;
+}
+
+.letters {
+    background-color: white;
+    text-align: center;
+    height: 200px;
+    padding-top: 25px;
+}
+
+#currentWord {
+    letter-spacing: 10px;
+    padding-top: 100px;
+}
+
+/* #pressKeyToStart,  */
+#gameover-image, 
+#youwin-image { display: none;}
