@@ -6,14 +6,12 @@ body {
 
 .container {
 
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .title {
-    /* margin-left: 25%; */
     border: solid 3px #fff475;
     display: inline-block;
-    margin-left: 50px;
 }
 
 #pressKeyToStart {
@@ -27,18 +25,18 @@ body {
     background-color: #ffff70;
     text-align: center;
     margin-right: 30px;
-    
 }
 
 header {
     margin-bottom: 20px;
 }
+
 .word {
     background-color: #462b04;
     text-align: center;
     height: 400px;
     padding-bottom:;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     padding: 15px 15px;
 }
 
@@ -58,21 +56,22 @@ header {
     text-align: center;
     height: 200px;
     padding-top: 25px;
+    border: solid 3px #ffff70;
 }
 
 .guesses {
-    background-color: white;
     text-align: center;
     height: 200px;
     margin-bottom: 25px;
     padding-top: 25px;
+    border: solid 3px #ffff70;
 }
 
 .letters {
-    background-color: white;
     text-align: center;
     height: 200px;
     padding-top: 25px;
+    border: solid 3px #ffff70;
 }
 
 #currentWord {
@@ -89,7 +88,29 @@ header {
 #you-win { 
     display: none;
     position: absolute;
-    right: 25px;
-    top: 15px;
+    top: 0px;
+    right: 20px;
+}
 
+#family {
+    position: relative;
+    top: 10px;
+    right: 70px;
+    border: solid 3px #ffff70;
+}
+
+.score, .guesses, .letters {
+    background-color:#afeaf8;
+    font-family: 'Fredoka One', cursive;
+
+}
+
+footer {
+    margin-top: 75px;
+    background-color: gray;
+    text-align: center;
+    height: 75px;
+    color: white;
+    padding-top: 25px;
+    border-top: solid 3px #ffff70;
 }
