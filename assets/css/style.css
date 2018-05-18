@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .word {
     background-color: #462b04;
@@ -80,6 +80,16 @@ header {
     padding-top: 100px;
 }
 
-/* #pressKeyToStart,  */
-#gameover-image, 
-#youwin-image { display: none;}
+#you-lose {
+    display: none;   
+    position: absolute;
+    top: 15px;
+}
+
+#you-win { 
+    display: none;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+
+}
