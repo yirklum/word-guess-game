@@ -1,8 +1,8 @@
 // Create an array of words
 
 var wordList =
-    ["SPRINGFIELD", "HOMER", "KRUSTY", "BART", "BORT", "SKINNER", "SMITHERS", "LISA", "MAGGIE",
-        "MARGE", "MILLHOUSE", "DOH", "ISOTOPES", "WIGGUM", "NELSON", "FLANDERS", "QUIMBY", "KRABAPPEL"
+    ["SPRINGFIELD", "HOMER", "KRUSTY", "BART", "BORT", "SKINNER", "SMITHERS", "LISA", "MAGGIE", "BLINKY",
+        "MARGE", "MILLHOUSE", "DOH", "ISOTOPES", "WIGGUM", "NELSON", "FLANDERS", "QUIMBY", "KRABAPPEL", "FRINK"
     ];
 
 // Declare variables
@@ -34,8 +34,8 @@ function resetGame() {
     }   
 
     // document.getElementById("pressKeyToStart").style.cssText= "display: none";
-    document.getElementById("gameover-image").style.cssText = "display: none";
-    document.getElementById("youwin-image").style.cssText = "display: none";
+    document.getElementById("you-lose").style.cssText = "display: none";
+    document.getElementById("you-win").style.cssText = "display: none";
 
     updateDisplay();
 };
@@ -78,7 +78,7 @@ function evaluateGuess(letter) {
 
 function checkWin() {
     if(currentWord.indexOf("_") === -1) {
-        document.getElementById("youwin-image").style.cssText = "display: block";
+        document.getElementById("you-win").style.cssText = "display: block";
         document.getElementById("pressKeyToStart").style.cssText= "display: block";
         totalWins++;
         winSound.play();
@@ -91,7 +91,7 @@ function checkWin() {
 function checkLoss() {
     if(guessesRemaining <= 0) {
         loseSound.play();
-        document.getElementById("gameover-image").style.cssText = "display: block";
+        document.getElementById("you-lose").style.cssText = "display: block";
         document.getElementById("pressKeyToStart").style.cssText = "display:block";
         gameOver = true;
     }
