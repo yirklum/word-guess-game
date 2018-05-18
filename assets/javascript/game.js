@@ -14,12 +14,12 @@ var currentWord = [];
 var guessesRemaining = 0;       
 var gameOver = false;
 var totalWins = 0;
+var totalLosses = 0;
 
 // Add sound
 
-var keySound = new Audio('./assets/sounds/typewriter-key.wav');
-var winSound = new Audio('./assets/sounds/you-win.wav');
-var loseSound = new Audio('./assets/sounds/you-lose.wav');
+var winSound = new Audio("assets/sound/excellent.wav");
+var loseSound = new Audio("assets/sound/doh1.wav");
 
 // Set up the game, pick a new word
 
@@ -34,6 +34,7 @@ function resetGame() {
     }   
 
     // document.getElementById("pressKeyToStart").style.cssText= "display: none";
+    document.getElementById("family").style.cssText = "display: block";
     document.getElementById("you-lose").style.cssText = "display: none";
     document.getElementById("you-win").style.cssText = "display: none";
 
@@ -49,6 +50,8 @@ function updateDisplay() {
     for (var i = 0; i < currentWord.length; i++) {
         currentWordText += currentWord[i];
     }
+
+    document.getElementById("totalLosses").innerText = totalLosses;
 
     document.getElementById("currentWord").innerText = currentWordText;
     document.getElementById("guessesRemaining").innerText = guessesRemaining;
@@ -79,7 +82,7 @@ function evaluateGuess(letter) {
 function checkWin() {
     if(currentWord.indexOf("_") === -1) {
         document.getElementById("you-win").style.cssText = "display: block";
-        document.getElementById("pressKeyToStart").style.cssText= "display: block";
+        document.getElementById("family").style.cssText= "display: none";
         totalWins++;
         winSound.play();
         gameOver = true;
@@ -92,7 +95,8 @@ function checkLoss() {
     if(guessesRemaining <= 0) {
         loseSound.play();
         document.getElementById("you-lose").style.cssText = "display: block";
-        document.getElementById("pressKeyToStart").style.cssText = "display:block";
+        document.getElementById("family").style.cssText = "display:none";
+        totalLosses++;
         gameOver = true;
     }
 }
@@ -115,7 +119,6 @@ document.onkeydown = function(event) {
         gameOver = false;
     } else {
         if(event.keyCode >= 65 && event.keyCode <= 90) {
-            keySound.play();
             makeGuess(event.key.toUpperCase());
             updateDisplay();
             checkWin();
